@@ -2,6 +2,8 @@ let form = document.querySelector('.add');
 let list = document.querySelector('.todos');
 const search = document.querySelector('.search input');
 
+document.body.style.backgroundColor = "#352f5b";
+
 
 const template = (todo) =>{
 	const html = `<li class="list-group-item d-flex justify-content-between align-items-center">
