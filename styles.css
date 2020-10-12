@@ -19,3 +19,5 @@ input[type=text]:focus{
 .filtered{
 	display: none !important;
 }
+
+  .clock{color:#FFFFFF; font-size: 4em; text-align: center;background-color: #2A2649;}
