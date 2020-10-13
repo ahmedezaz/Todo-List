@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="animate.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <title>Ezaz Todo List</title>
@@ -12,18 +13,18 @@
 </head>
 <body>
 
-  <div class="clock"></div>
+  <div class="clock wow fadeInDown"></div>
 
   <div class="container">
 
     <header class="text-center text-light my-4">
-      <h1 class="mb-4">Ezaz Todo List</h1>
+      <h1 class="mb-4 wow fadeInDown">Ezaz Todo List</h1>
       <form class="search">
-        <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+        <input class="form-control m-auto wow bounceInLeft" type="text" name="search" placeholder="search todos" />
       </form>
     </header>
 
-    <ul class="list-group todos mx-auto text-light">
+    <ul class="list-group todos mx-auto text-light wow flipInX" data-wow-duration="2s">
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span>Go to gym</span>
         <i class="far fa-trash-alt delete"></i>
@@ -38,14 +39,28 @@
       </li>
     </ul>
 
-    <form class="add text-center my-4">
+    <form class="add text-center my-4 wow fadeInUp">
       <label class="text-light">Add a new todo...</label>
       <input class="form-control m-auto" type="text" name="add" />
     </form>
 
   </div>
   
-
+  <script src="jquery-3.5.0.min.js"></script>
+   <script src="wow.min.js"></script>
   <script src="app.js"></script>
+
+  <script>
+     wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+  </script>
 </body>
 </html>
